@@ -44,7 +44,7 @@ export default function Navbar() {
             href="https://wa.me/9666029839?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20admission%20at%20Kinder%20Kaly"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 py-2 md:px-5 md:py-3 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all font-medium text-xs sm:text-sm md:text-base whitespace-nowrap shadow-md hover:shadow-lg"
+            className="hidden md:flex bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 py-2 md:px-5 md:py-3 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all font-medium text-xs sm:text-sm md:text-base whitespace-nowrap shadow-md hover:shadow-lg"
           >
             Admission Enquiry
           </a>
