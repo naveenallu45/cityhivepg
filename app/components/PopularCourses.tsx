@@ -72,7 +72,7 @@ export default function PopularCourses() {
                   href="https://wa.me/9666029839?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20admission%20at%20Kinder%20Kaly"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 sm:px-4 md:px-5 py-2.5 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all font-medium text-xs sm:text-sm shadow-md hover:shadow-lg text-center"
+                  className="flex-1 md:flex-none bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 sm:px-4 md:px-5 py-2.5 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all font-medium text-xs sm:text-sm shadow-md hover:shadow-lg text-center"
                 >
                   Enroll Now
                 </a>
@@ -80,7 +80,7 @@ export default function PopularCourses() {
                   href="https://wa.me/9666029839?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20admission%20at%20Kinder%20Kaly"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 bg-white border-2 border-purple-600 text-purple-600 px-3 sm:px-4 md:px-5 py-2.5 rounded-lg hover:bg-purple-50 transition-colors font-medium text-xs sm:text-sm text-center"
+                  className="hidden md:flex flex-1 bg-white border-2 border-purple-600 text-purple-600 px-3 sm:px-4 md:px-5 py-2.5 rounded-lg hover:bg-purple-50 transition-colors font-medium text-xs sm:text-sm text-center"
                 >
                   Know More
                 </a>
