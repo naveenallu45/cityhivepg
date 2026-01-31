@@ -12,7 +12,7 @@ export default function Navbar() {
             alt="KidsLearn Logo"
             width={132}
             height={44}
-            className="h-[1.925rem] w-auto md:h-11"
+            className="h-[2.1175rem] w-auto md:h-11"
             priority
           />
         </div>
@@ -36,7 +36,7 @@ export default function Navbar() {
             href="https://wa.me/9666029839?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20admission%20at%20Kinder%20Kaly"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-3 py-[0.55rem] md:px-5 md:py-3 rounded-lg hover:from-orange-600 hover:to-yellow-600 transition-all font-medium text-xs sm:text-sm md:text-base whitespace-nowrap shadow-md hover:shadow-lg"
+            className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-3 py-[0.605rem] md:px-5 md:py-3 rounded-lg hover:from-orange-600 hover:to-yellow-600 transition-all font-medium text-xs sm:text-sm md:text-base whitespace-nowrap shadow-md hover:shadow-lg"
           >
             Admissions Open 2026-2027
           </a>
