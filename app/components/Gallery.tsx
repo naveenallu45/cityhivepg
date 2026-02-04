@@ -4,35 +4,27 @@ export default function Gallery() {
   const galleryItems = [
     {
       id: 1,
-      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769843022/Screenshot_2026-01-31_at_12.30.00_PM_yxvxf0.png',
+      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1770196588/unnamed_n4ruoc.jpg',
     },
     {
       id: 2,
-      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769843025/Screenshot_2026-01-31_at_12.30.36_PM_ylzyqn.png',
+      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1770196604/unnamed-6_jvrsky.jpg',
     },
     {
       id: 3,
-      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769843027/Screenshot_2026-01-31_at_12.31.06_PM_zkus3z.png',
+      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1770196610/unnamed-5_bmymdw.jpg',
     },
     {
       id: 4,
-      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769843029/Screenshot_2026-01-31_at_12.32.08_PM_rmldzn.png',
+      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1770196605/unnamed-2_dgyx0m.jpg',
     },
     {
       id: 5,
-      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769843030/Screenshot_2026-01-31_at_12.31.59_PM_hjkjmb.png',
+      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1770196612/unnamed-4_jljtrc.jpg',
     },
     {
       id: 6,
-      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769843032/Screenshot_2026-01-31_at_12.31.31_PM_kg6wud.png',
-    },
-    {
-      id: 7,
-      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769843037/Screenshot_2026-01-31_at_12.30.16_PM_sy6yc4.png',
-    },
-    {
-      id: 8,
-      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769843070/Screenshot_2026-01-31_at_12.33.16_PM_dtt1oq.png',
+      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1770196604/unnamed-3_fmmpdj.jpg',
     },
   ];
 
@@ -44,10 +36,13 @@ export default function Gallery() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Our <span className="text-orange-500">Gallery</span>
           </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Take a look at our premium facilities and comfortable living spaces.
+          </p>
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 lg:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-6">
           {galleryItems.map((item) => (
             <div
               key={item.id}

@@ -1,73 +1,108 @@
 import React from 'react';
-import Image from 'next/image';
+import { 
+  FaSnowflake, 
+  FaTshirt, 
+  FaWifi, 
+  FaShower, 
+  FaBox, 
+  FaBed, 
+  FaArchive, 
+  FaVideo 
+} from 'react-icons/fa';
 
 export default function Features() {
-  const features = [
+  const amenities = [
     {
-      title: 'Fun Quiz',
-      description: 'Test your understanding with a short but fun quizzes!',
-      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769839540/Screenshot_2026-01-31_at_11.34.31_AM_ous00f.png',
-      imagePosition: 'right',
+      title: 'AC / Non-AC Rooms',
+      description: 'Choose from air-conditioned or non-AC rooms based on your preference. All rooms are well-ventilated and designed for comfort.',
+      icon: FaSnowflake,
+      iconBg: 'bg-blue-500',
+      cardBg: 'bg-blue-50',
     },
     {
-      title: 'Creative Activities',
-      description: 'Express your creativity with fun projects in drawing, crafting, and science.',
-      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769839538/Screenshot_2026-01-31_at_11.34.41_AM_ywyasl.png',
-      imagePosition: 'left',
+      title: 'Washing Machines',
+      description: 'Convenient laundry facilities available for all residents. Keep your clothes clean and fresh without any hassle.',
+      icon: FaTshirt,
+      iconBg: 'bg-green-500',
+      cardBg: 'bg-green-50',
     },
     {
-      title: 'Learn with Games',
-      description: 'Learn something new while your kids playing games!',
-      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769839537/Screenshot_2026-01-31_at_11.34.51_AM_n7cdep.png',
-      imagePosition: 'right',
+      title: '24/7 Wi-Fi',
+      description: 'Stay connected with high-speed internet available round the clock. Perfect for work, streaming, and staying in touch.',
+      icon: FaWifi,
+      iconBg: 'bg-purple-500',
+      cardBg: 'bg-purple-50',
+    },
+    {
+      title: '24/7 Hot Water',
+      description: 'Enjoy hot water facilities available 24/7 for your convenience. No more waiting for hot water, anytime you need it.',
+      icon: FaShower,
+      iconBg: 'bg-orange-500',
+      cardBg: 'bg-orange-50',
+    },
+    {
+      title: 'Refrigerator',
+      description: 'Store your food and beverages safely with dedicated refrigerator facilities. Keep your essentials fresh and cool.',
+      icon: FaBox,
+      iconBg: 'bg-cyan-500',
+      cardBg: 'bg-cyan-50',
+    },
+    {
+      title: 'Comfortable Spring Beds',
+      description: 'Rest well on premium spring beds designed for maximum comfort. Wake up refreshed and ready for your day.',
+      icon: FaBed,
+      iconBg: 'bg-pink-500',
+      cardBg: 'bg-pink-50',
+    },
+    {
+      title: 'Spacious Cupboards',
+      description: 'Ample storage space with spacious cupboards to organize all your belongings. Keep your room neat and tidy.',
+      icon: FaArchive,
+      iconBg: 'bg-indigo-500',
+      cardBg: 'bg-indigo-50',
+    },
+    {
+      title: 'CCTV Cameras',
+      description: '24/7 security surveillance with CCTV cameras ensuring a safe and secure living environment for all residents.',
+      icon: FaVideo,
+      iconBg: 'bg-red-500',
+      cardBg: 'bg-red-50',
     },
   ];
 
   return (
-    <section id="features" className="w-full px-6 py-16 md:px-12 lg:px-20 bg-green-50/50">
+    <section id="amenities" className="w-full px-6 py-16 md:px-12 lg:px-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our{' '}
-            <span className="text-purple-600">interactive</span>
-            {' '}features
+            Premium{' '}
+            <span className="text-purple-600">Amenities</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Everything your child needs to learn, grow, and have fun in one place.
+            Everything you need for a comfortable and convenient living experience.
           </p>
         </div>
 
-        {/* Feature Cards */}
-        <div className="space-y-6 sm:space-y-8">
-          {features.map((feature, index) => (
+        {/* Amenities Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {amenities.map((amenity, index) => (
             <div
               key={index}
-              className={`bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden flex ${
-                feature.imagePosition === 'left' ? 'flex-row' : 'flex-row-reverse'
-              }`}
+              className={`${amenity.cardBg} rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50`}
             >
-              {/* Text Content */}
-              <div className="flex-1 p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-center min-w-0">
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-2 sm:mb-4">
-                  {feature.title}
-                </h3>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
+              {/* Icon */}
+              <div className={`w-16 h-16 ${amenity.iconBg} rounded-xl flex items-center justify-center mb-4 shadow-md`}>
+                <amenity.icon className="text-2xl text-white" />
               </div>
-
-              {/* Image */}
-              <div className="flex-1 relative h-48 sm:h-56 md:h-64 flex items-center justify-center bg-white min-w-0 flex-shrink-0 p-4 sm:p-6 md:p-8">
-                <Image
-                  src={feature.image}
-                  alt={feature.title}
-                  width={286}
-                  height={190}
-                  className="object-contain w-full h-full"
-                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, 50vw"
-                />
-              </div>
+              
+              {/* Content */}
+              <h3 className="text-lg font-bold text-gray-900 mb-2">
+                {amenity.title}
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {amenity.description}
+              </p>
             </div>
           ))}
         </div>

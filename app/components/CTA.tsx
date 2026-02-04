@@ -12,29 +12,29 @@ export default function CTA() {
           {/* Content */}
           <div className="relative z-10">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to start your child's learning adventure?
+              Ready to find your perfect PG?
             </h2>
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-              Join thousands of families who trust KidsLearn to make learning fun and effective. Start your free trial today!
+              Join our community of working professionals. Experience premium living with modern amenities and unmatched convenience. Book your room today!
             </p>
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="https://wa.me/9666029839?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20admission%20at%20Kinder%20Kaly"
+                href="https://wa.me/917075861098?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20room%20booking%20at%20Cityhive%20PG"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium border-2 border-white shadow-lg hover:shadow-xl text-center"
               >
-                Admission Enquiry
+                Book Room Now
               </a>
               <a 
-                href="https://wa.me/9666029839?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20admission%20at%20Kinder%20Kaly"
+                href="https://wa.me/917075861098?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20room%20booking%20at%20Cityhive%20PG"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-lg hover:from-yellow-600 hover:to-orange-600 transition-all font-medium shadow-lg hover:shadow-xl text-center"
               >
-                Admissions Open 2026-2027
+                Contact for Details
               </a>
             </div>
           </div>

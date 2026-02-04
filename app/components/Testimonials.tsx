@@ -4,22 +4,22 @@ import Image from 'next/image';
 export default function Testimonials() {
   const testimonials = [
     {
-      name: 'Priya Reddy',
-      role: 'Parent from Kothapet',
-      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769841862/Screenshot_2026-01-31_at_12.13.08_PM_pdzyhw.png',
-      quote: 'Kinder Kaly has been wonderful for my daughter. The teachers are caring and the activities keep her engaged. She loves going to school every day!',
+      name: 'Tharun Reddy',
+      role: 'Software Engineer',
+      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1770199489/482743223_1577900379573471_4282267051009692732_n_rx55ba.jpg',
+      quote: 'Cityhive PG has been perfect for me! The location is great - just 1km from my office. The Wi-Fi is fast, rooms are clean, and the amenities are top-notch. Highly recommended!',
     },
     {
-      name: 'Rajesh Kumar',
-      role: 'Parent from Gaytrinagar',
-      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769841867/Screenshot_2026-01-31_at_12.13.22_PM_x6isfj.png',
-      quote: 'The low student-teacher ratio ensures my son gets individual attention. The activity-based learning approach has helped him develop confidence and creativity.',
+      name: 'Abhinav Karthik',
+      role: 'IT Professional',
+      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1770199488/435633609_1139243857495656_4088283122590422982_n_iu0zsl.jpg',
+      quote: 'Living here has been a great experience. The AC room is comfortable, hot water is available 24/7, and the washing machine facility is very convenient. Great value for money!',
     },
     {
-      name: 'Lakshmi Devi',
-      role: 'Parent from Mohan Nagar',
-      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769841861/Screenshot_2026-01-31_at_12.13.56_PM_ql9yik.png',
-      quote: 'As a working parent, the transport facility is a huge relief. The safe campus and qualified teachers give me peace of mind. Highly recommend Kinder Kaly!',
+      name: 'Gowri shankar',
+      role: 'Working Professional',
+      image: 'https://res.cloudinary.com/dmhdhzr6y/image/upload/v1770199488/625111834_18342682315236876_1309534540373568821_n_edzy87.jpg',
+      quote: 'The new building is well-maintained and secure. The spring beds are comfortable, and the spacious cupboards are a plus. Perfect for working professionals like me!',
     },
   ];
 
@@ -30,7 +30,7 @@ export default function Testimonials() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             What{' '}
-            <span className="text-purple-600">families</span>
+            <span className="text-purple-600">residents</span>
             {' '}say about us
           </h2>
         </div>

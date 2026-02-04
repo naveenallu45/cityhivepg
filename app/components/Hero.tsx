@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { FaBuilding, FaCrown, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function Hero() {
   return (
@@ -9,35 +10,51 @@ export default function Hero() {
           {/* Left Side - Text Content */}
           <div className="space-y-4 sm:space-y-6 order-2 md:order-1">
             {/* Trusted Badge */}
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-              <span className="text-xs sm:text-sm text-gray-600">Trusted by 1000+ families.</span>
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-shadow">
+                <FaBuilding className="text-sm" />
+                <span className="text-xs sm:text-sm font-semibold">New Building</span>
+              </div>
+              <div className="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-shadow">
+                <FaCrown className="text-sm" />
+                <span className="text-xs sm:text-sm font-semibold">Premium Living</span>
+              </div>
+              <div className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-shadow">
+                <FaMapMarkerAlt className="text-sm" />
+                <span className="text-xs sm:text-sm font-semibold">1km from IT Hubs</span>
+              </div>
             </div>
 
             {/* Main Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              The best place to{' '}
-              <span className="text-blue-600">learn</span>
-              {' '}and{' '}
-              <span className="text-orange-500">play</span>
-              {' '}for kids.
+              Welcome to{' '}
+              <span className="text-blue-600">Cityhive</span>
+              {' '}Luxury{' '}
+              <span className="text-orange-500">Men's PG</span>
             </h1>
 
             {/* Description */}
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              Discover thousands of fun and interactive learning activities to support your child's growth and learning process.
+              Premium living space for working professionals. Modern amenities, comfortable rooms, and just 1km from major IT hubs. Your perfect home away from home.
             </p>
+
+            {/* Key Highlights */}
+            <div className="flex flex-wrap gap-3 pt-2">
+              <span className="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">24/7 Wi-Fi</span>
+              <span className="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium">AC/Non-AC Rooms</span>
+              <span className="text-sm bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-medium">Near IT Hubs</span>
+            </div>
 
             {/* CTA Button */}
             <div className="pt-2 sm:pt-4">
               <a 
-                href="https://wa.me/9666029839?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20admission%20at%20Kinder%20Kaly"
+                href="https://wa.me/917075861098?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20room%20booking%20at%20Cityhive%20PG"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block w-full sm:w-auto bg-gradient-to-r from-purple-600 to-orange-500 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-xl hover:from-purple-700 hover:to-orange-600 transition-all font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 text-center"
               >
-                <span className="hidden sm:inline">Start Your Kids' Education with Kinder Kaly →</span>
-                <span className="sm:hidden">Start with Kinder Kaly →</span>
+                <span className="hidden sm:inline">Book Your PG Room Now →</span>
+                <span className="sm:hidden">Book PG Room →</span>
               </a>
             </div>
           </div>
@@ -45,11 +62,11 @@ export default function Hero() {
           {/* Right Side - Images */}
           <div className="relative flex gap-2 sm:gap-4 justify-center md:justify-end order-1 md:order-2 mb-6 md:mb-0">
             <div className="flex gap-2 sm:gap-4">
-              {/* Child Image 1 */}
+              {/* PG Image 1 */}
               <div className="w-24 h-32 sm:w-36 sm:h-44 md:w-52 md:h-60 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769841862/Screenshot_2026-01-31_at_12.13.08_PM_pdzyhw.png"
-                  alt="Kids learning"
+                  src="https://res.cloudinary.com/dmhdhzr6y/image/upload/v1770196610/unnamed-5_bmymdw.jpg"
+                  alt="Cityhive PG - Premium living space"
                   width={200}
                   height={235}
                   className="w-full h-full object-cover"
@@ -57,11 +74,11 @@ export default function Hero() {
                 />
               </div>
 
-              {/* Child Image 2 */}
+              {/* PG Image 2 */}
               <div className="w-24 h-32 sm:w-36 sm:h-44 md:w-52 md:h-60 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg mt-4 sm:mt-6 md:mt-8">
                 <Image
-                  src="https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769841867/Screenshot_2026-01-31_at_12.13.22_PM_x6isfj.png"
-                  alt="Kids activities"
+                  src="https://res.cloudinary.com/dmhdhzr6y/image/upload/v1770196588/unnamed_n4ruoc.jpg"
+                  alt="Cityhive PG - Modern amenities"
                   width={200}
                   height={235}
                   className="w-full h-full object-cover"
@@ -69,11 +86,11 @@ export default function Hero() {
                 />
               </div>
 
-              {/* Child Image 3 */}
+              {/* PG Image 3 */}
               <div className="w-24 h-32 sm:w-36 sm:h-44 md:w-52 md:h-60 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://res.cloudinary.com/dmhdhzr6y/image/upload/v1769841861/Screenshot_2026-01-31_at_12.13.56_PM_ql9yik.png"
-                  alt="Kids playing"
+                  src="https://res.cloudinary.com/dmhdhzr6y/image/upload/v1770196612/unnamed-4_jljtrc.jpg"
+                  alt="Cityhive PG - Comfortable rooms"
                   width={200}
                   height={235}
                   className="w-full h-full object-cover"

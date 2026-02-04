@@ -1,47 +1,47 @@
 import React from 'react';
-import { FaChalkboardTeacher, FaHandsHelping, FaShieldAlt, FaPalette, FaUsers, FaBus } from 'react-icons/fa';
+import { FaWifi, FaMapMarkerAlt, FaShieldAlt, FaBed, FaSnowflake, FaUsers } from 'react-icons/fa';
 
 export default function WhyChooseUs() {
   const reasons = [
     {
-      icon: FaChalkboardTeacher,
-      title: 'Qualified & Caring Teachers',
-      description: 'Our experienced and certified teachers provide personalized attention and create a nurturing learning environment for every child.',
+      icon: FaMapMarkerAlt,
+      title: 'Prime Location',
+      description: 'Located just 1km from major IT hubs, making your daily commute convenient and time-saving.',
       bgColor: 'bg-purple-100',
       iconBg: 'bg-purple-600',
     },
     {
-      icon: FaHandsHelping,
-      title: 'Activity-Based Learning',
-      description: 'We focus on hands-on activities and interactive methods that make learning engaging and help children understand concepts better.',
+      icon: FaWifi,
+      title: '24/7 High-Speed Wi-Fi',
+      description: 'Stay connected with uninterrupted high-speed internet for work, entertainment, and staying in touch.',
       bgColor: 'bg-blue-100',
       iconBg: 'bg-blue-600',
     },
     {
       icon: FaShieldAlt,
-      title: 'Safe & Secure Campus',
-      description: 'Our campus is equipped with modern security systems, CCTV surveillance, and safety protocols to ensure your child\'s well-being.',
+      title: 'Safe & Secure',
+      description: 'New building with modern security systems ensuring a safe and secure living environment for all residents.',
       bgColor: 'bg-green-100',
       iconBg: 'bg-green-600',
     },
     {
-      icon: FaPalette,
-      title: 'Creative & Fun Environment',
-      description: 'We create a vibrant and joyful atmosphere where children can explore, create, and learn through play and creative activities.',
+      icon: FaBed,
+      title: 'Comfortable Living',
+      description: 'Premium spring beds, spacious cupboards, and well-maintained rooms for a comfortable stay.',
       bgColor: 'bg-orange-100',
       iconBg: 'bg-orange-600',
     },
     {
-      icon: FaUsers,
-      title: 'Low Student–Teacher Ratio',
-      description: 'With smaller class sizes, each child receives individual attention and personalized guidance from our dedicated teachers.',
+      icon: FaSnowflake,
+      title: 'AC & Non-AC Options',
+      description: 'Choose between air-conditioned or non-AC rooms based on your preference and budget.',
       bgColor: 'bg-yellow-100',
       iconBg: 'bg-yellow-600',
     },
     {
-      icon: FaBus,
-      title: 'Transport Facility Available',
-      description: 'We offer safe and reliable transportation services with trained drivers and GPS tracking for convenient school commute.',
+      icon: FaUsers,
+      title: 'Ideal for Professionals',
+      description: 'Perfect living space designed for working professionals seeking comfort, convenience, and community.',
       bgColor: 'bg-pink-100',
       iconBg: 'bg-pink-600',
     },
@@ -54,15 +54,15 @@ export default function WhyChooseUs() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Why choose{' '}
-            <span className="text-purple-600">our school</span>
+            <span className="text-purple-600">Cityhive PG</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We provide the best learning experience for your child with proven methods and dedicated support.
+            Experience premium living with modern amenities and unmatched convenience for working professionals.
           </p>
         </div>
 
         {/* Reasons Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {reasons.map((reason, index) => (
             <div
               key={index}

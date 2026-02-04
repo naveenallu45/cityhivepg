@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KidsLearn - The best place to learn and play for kids",
-  description: "Discover thousands of fun and interactive learning activities to support your child's growth and learning process.",
+  title: "Cityhive Luxury Men's PG - Premium Living for Working Professionals",
+  description: "Welcome to Cityhive Luxury Men's PG - Premium living with AC/Non-AC rooms, 24/7 Wi-Fi, hot water, and modern amenities. Located just 1km from major IT hubs. Book your room today!",
 };
 
 export default function RootLayout({

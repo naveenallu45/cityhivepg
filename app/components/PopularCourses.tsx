@@ -1,90 +1,105 @@
 import React from 'react';
+import { FaUser, FaUsers, FaBed, FaHome } from 'react-icons/fa';
 
 export default function PopularCourses() {
-  const classes = [
+  const roomTypes = [
     {
-      title: 'Play Group',
-      ageRange: 'Age 2–3',
-      description: 'Learning through play & fun activities',
+      title: 'Single Sharing',
+      price: '₹23,000',
+      priceLabel: 'per month',
+      description: 'Private room for maximum comfort and privacy',
+      icon: FaUser,
       iconBg: 'bg-purple-500',
+      cardBg: 'bg-purple-50',
+      badge: 'Premium',
     },
     {
-      title: 'Nursery',
-      ageRange: 'Age 3–4',
-      description: 'Early literacy, numbers & creativity',
+      title: 'Double Sharing',
+      price: '₹12,000',
+      priceLabel: 'per month',
+      description: 'Comfortable room shared with one roommate',
+      icon: FaUsers,
       iconBg: 'bg-blue-500',
+      cardBg: 'bg-blue-50',
+      badge: 'Popular',
     },
     {
-      title: 'LKG',
-      ageRange: 'Age 4–5',
-      description: 'Strong basics with playful learning',
+      title: 'Triple Sharing',
+      price: '₹9,000',
+      priceLabel: 'per month',
+      description: 'Spacious room shared with two roommates',
+      icon: FaBed,
       iconBg: 'bg-green-500',
+      cardBg: 'bg-green-50',
+      badge: 'Value',
     },
     {
-      title: 'UKG',
-      ageRange: 'Age 5–6',
-      description: 'Reading, writing & confidence building',
+      title: 'Four Sharing',
+      price: '₹8,000',
+      priceLabel: 'per month',
+      description: 'Budget-friendly option with three roommates',
+      icon: FaHome,
       iconBg: 'bg-orange-500',
-    },
-    {
-      title: '1st Class',
-      ageRange: 'Age 6–7',
-      description: 'Academic foundation with activities',
-      iconBg: 'bg-yellow-500',
-    },
-    {
-      title: '2nd Class',
-      ageRange: 'Age 7–8',
-      description: 'Skill development & subject mastery',
-      iconBg: 'bg-pink-500',
+      cardBg: 'bg-orange-50',
+      badge: 'Economy',
     },
   ];
 
   return (
-    <section id="courses" className="w-full px-6 sm:px-8 py-16 sm:py-20 md:px-12 lg:px-20 bg-purple-50/50">
+    <section id="rooms" className="w-full px-6 sm:px-8 py-16 sm:py-20 md:px-12 lg:px-20 bg-gradient-to-br from-purple-50 via-blue-50 to-orange-50">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Classes{' '}
-            <span className="text-orange-500">We Offer</span>
+            Choose Your{' '}
+            <span className="text-orange-500">Room Type</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Start your child's learning journey with our comprehensive classes.
+            Select the perfect accommodation option that fits your budget and lifestyle.
           </p>
         </div>
 
-        {/* Class Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
-          {classes.map((classItem, index) => (
+        {/* Room Cards */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          {roomTypes.map((room, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-7 md:p-8 lg:p-10 shadow-lg hover:shadow-xl transition-shadow"
+              className={`${room.cardBg} rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-white/50 relative overflow-hidden`}
             >
-              {/* Content */}
-              <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-3 sm:mb-4">{classItem.title}</h3>
-              <p className="text-xs sm:text-sm font-semibold text-purple-600 mb-3 sm:mb-4">{classItem.ageRange}</p>
-              <p className="text-gray-600 text-sm sm:text-base md:text-lg font-bold mb-6 sm:mb-8">{classItem.description}</p>
+              {/* Badge */}
+              {room.badge && (
+                <div className="absolute top-4 right-4">
+                  <span className={`${room.iconBg} text-white text-xs font-bold px-3 py-1 rounded-full shadow-md`}>
+                    {room.badge}
+                  </span>
+                </div>
+              )}
 
-              {/* CTA Buttons */}
-              <div className="flex flex-row gap-2">
-                <a 
-                  href="https://wa.me/9666029839?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20admission%20at%20Kinder%20Kaly"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 md:flex-none bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 sm:px-4 md:px-5 py-2.5 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all font-medium text-xs sm:text-sm shadow-md hover:shadow-lg text-center"
-                >
-                  Enroll Now
-                </a>
-                <a 
-                  href="https://wa.me/9666029839?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20admission%20at%20Kinder%20Kaly"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hidden md:flex flex-1 bg-white border-2 border-purple-600 text-purple-600 px-3 sm:px-4 md:px-5 py-2.5 rounded-lg hover:bg-purple-50 transition-colors font-medium text-xs sm:text-sm text-center"
-                >
-                  Know More
-                </a>
+              {/* Icon */}
+              <div className={`w-20 h-20 ${room.iconBg} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
+                <room.icon className="text-3xl text-white" />
               </div>
+
+              {/* Content */}
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">{room.title}</h3>
+              
+              {/* Price */}
+              <div className="mb-4">
+                <p className="text-3xl sm:text-4xl font-bold text-gray-900 mb-1">{room.price}</p>
+                <p className="text-sm text-gray-600">{room.priceLabel}</p>
+              </div>
+
+              <p className="text-gray-600 text-sm sm:text-base mb-6 leading-relaxed">{room.description}</p>
+
+              {/* CTA Button */}
+              <a 
+                href={`https://wa.me/917075861098?text=${encodeURIComponent(`Hello, I would like to enquire about ${room.title} room booking at Cityhive PG`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-3 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all font-semibold text-sm shadow-md hover:shadow-lg text-center transform hover:scale-105"
+              >
+                Book Now
+              </a>
             </div>
           ))}
         </div>
