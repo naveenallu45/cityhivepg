@@ -38,9 +38,9 @@ export default function Footer() {
   return (
     <footer className="w-full bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-6 py-12 md:px-12 lg:px-20">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Logo and Description */}
-          <div>
+          <div className="md:col-span-1">
             <div className="mb-4">
               <Image
                 src="https://res.cloudinary.com/dmhdhzr6y/image/upload/v1770196208/622570969_17851432797664466_7802255184101371826_n_u0zpfi_e_background_removal_f_png_jhmmnp.png"
@@ -61,46 +61,49 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Amenities */}
-          <div>
-            <h3 className="text-white font-semibold mb-4 text-lg">Amenities</h3>
-            <ul className="space-y-3 text-sm">
-              {amenities.map((amenity, index) => (
-                <li key={index} className="flex items-center gap-3 group">
-                  <div className={`w-6 h-6 ${amenity.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                    <amenity.icon className="text-sm" />
-                  </div>
-                  <span className="text-gray-400 group-hover:text-white transition-colors">{amenity.name}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Amenities and Room Rent - Side by side on mobile */}
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-6 md:col-span-2">
+            {/* Amenities */}
+            <div>
+              <h3 className="text-white font-semibold mb-4 text-lg">Amenities</h3>
+              <ul className="space-y-3 text-sm">
+                {amenities.map((amenity, index) => (
+                  <li key={index} className="flex items-center gap-3 group">
+                    <div className={`w-6 h-6 ${amenity.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                      <amenity.icon className="text-sm" />
+                    </div>
+                    <span className="text-gray-400 group-hover:text-white transition-colors">{amenity.name}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Room Rent */}
-          <div>
-            <h3 className="text-white font-semibold mb-4 text-lg">Room Rent</h3>
-            <ul className="space-y-3 text-sm">
-              {roomTypes.map((room, index) => (
-                <li key={index} className="flex items-center gap-3 group">
-                  <div className={`w-6 h-6 ${room.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                    <room.icon className="text-sm" />
-                  </div>
-                  <span className="text-gray-400 group-hover:text-white transition-colors">
-                    <span className="font-medium">{room.name}</span> – <span className="text-purple-400 font-semibold">{room.price}</span>
-                  </span>
-                </li>
-              ))}
-            </ul>
-            <div className="flex items-center gap-2 mt-4 pt-4 border-t border-gray-800">
-              <div className="w-6 h-6 bg-purple-600 rounded-lg flex items-center justify-center">
-                <FaBriefcase className="text-white text-xs" />
+            {/* Room Rent */}
+            <div>
+              <h3 className="text-white font-semibold mb-4 text-lg">Room Types</h3>
+              <ul className="space-y-3 text-sm">
+                {roomTypes.map((room, index) => (
+                  <li key={index} className="flex items-center gap-3 group">
+                    <div className={`w-6 h-6 ${room.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                      <room.icon className="text-sm" />
+                    </div>
+                    <span className="text-gray-400 group-hover:text-white transition-colors">
+                      <span className="font-medium">{room.name}</span> – <span className="text-purple-400 font-semibold">{room.price}</span>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex items-center gap-2 mt-4 pt-4 border-t border-gray-800">
+                <div className="w-6 h-6 bg-purple-600 rounded-lg flex items-center justify-center">
+                  <FaBriefcase className="text-white text-xs" />
+                </div>
+                <p className="text-purple-400 font-medium text-sm">Ideal for Working Professionals</p>
               </div>
-              <p className="text-purple-400 font-medium text-sm">Ideal for Working Professionals</p>
             </div>
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="md:col-span-1">
             <h3 className="text-white font-semibold mb-4 text-lg">Contact Us</h3>
             <ul className="space-y-4 text-sm">
               <li className="flex items-center gap-3 group">

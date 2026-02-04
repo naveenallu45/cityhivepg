@@ -26,7 +26,7 @@ export default function CTA() {
                 rel="noopener noreferrer"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium border-2 border-white shadow-lg hover:shadow-xl text-center"
               >
-                Book Room Now
+                Book PG Room Now
               </a>
               <a 
                 href="https://wa.me/917075861098?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20room%20booking%20at%20Cityhive%20PG"
