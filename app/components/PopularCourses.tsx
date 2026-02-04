@@ -64,39 +64,39 @@ export default function PopularCourses() {
           {roomTypes.map((room, index) => (
             <div
               key={index}
-              className={`${room.cardBg} rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-white/50 relative overflow-hidden`}
+              className={`${room.cardBg} rounded-2xl p-3 sm:p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-white/50 relative overflow-hidden`}
             >
               {/* Badge */}
               {room.badge && (
-                <div className="absolute top-4 right-4">
-                  <span className={`${room.iconBg} text-white text-xs font-bold px-3 py-1 rounded-full shadow-md`}>
+                <div className="absolute top-2 right-2 md:top-4 md:right-4">
+                  <span className={`${room.iconBg} text-white text-xs font-bold px-2 py-0.5 md:px-3 md:py-1 rounded-full shadow-md`}>
                     {room.badge}
                   </span>
                 </div>
               )}
 
               {/* Icon */}
-              <div className={`w-20 h-20 ${room.iconBg} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
-                <room.icon className="text-3xl text-white" />
+              <div className={`w-14 h-14 md:w-20 md:h-20 ${room.iconBg} rounded-2xl flex items-center justify-center mb-3 md:mb-6 shadow-lg`}>
+                <room.icon className="text-2xl md:text-3xl text-white" />
               </div>
 
               {/* Content */}
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">{room.title}</h3>
+              <h3 className="text-base md:text-xl lg:text-2xl font-bold text-gray-900 mb-2 md:mb-3">{room.title}</h3>
               
               {/* Price */}
-              <div className="mb-4">
-                <p className="text-3xl sm:text-4xl font-bold text-gray-900 mb-1">{room.price}</p>
-                <p className="text-sm text-gray-600">{room.priceLabel}</p>
+              <div className="mb-2 md:mb-4">
+                <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-1">{room.price}</p>
+                <p className="text-xs md:text-sm text-gray-600">{room.priceLabel}</p>
               </div>
 
-              <p className="text-gray-600 text-sm sm:text-base mb-6 leading-relaxed">{room.description}</p>
+              <p className="text-gray-600 text-xs md:text-sm lg:text-base mb-3 md:mb-6 leading-relaxed">{room.description}</p>
 
               {/* CTA Button */}
               <a 
                 href={`https://wa.me/917075861098?text=${encodeURIComponent(`Hello, I would like to enquire about ${room.title} room booking at Cityhive PG`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-3 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all font-semibold text-sm shadow-md hover:shadow-lg text-center transform hover:scale-105"
+                className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 py-2 md:px-4 md:py-3 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all font-semibold text-xs md:text-sm shadow-md hover:shadow-lg text-center transform hover:scale-105"
               >
                 Book Now
               </a>

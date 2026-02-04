@@ -89,18 +89,18 @@ export default function Features() {
           {amenities.map((amenity, index) => (
             <div
               key={index}
-              className={`${amenity.cardBg} rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50`}
+              className={`${amenity.cardBg} rounded-2xl p-3 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50`}
             >
               {/* Icon */}
-              <div className={`w-16 h-16 ${amenity.iconBg} rounded-xl flex items-center justify-center mb-4 shadow-md`}>
-                <amenity.icon className="text-2xl text-white" />
+              <div className={`w-12 h-12 md:w-16 md:h-16 ${amenity.iconBg} rounded-xl flex items-center justify-center mb-2 md:mb-4 shadow-md`}>
+                <amenity.icon className="text-xl md:text-2xl text-white" />
               </div>
               
               {/* Content */}
-              <h3 className="text-lg font-bold text-gray-900 mb-2">
+              <h3 className="text-sm md:text-lg font-bold text-gray-900 mb-1 md:mb-2">
                 {amenity.title}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
                 {amenity.description}
               </p>
             </div>
